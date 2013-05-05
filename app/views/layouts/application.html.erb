@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!-- Le styles -->
+    <title>Diwanou Gallas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<%= stylesheet_link_tag    "application", :media => "all" %>
+  	<%= javascript_include_tag "application" %>
+  	<%= csrf_meta_tags %>
+  	<%= yield(:head) %>
+    <style type="text/css">
+      body {
+        padding-top: 10px;
+        width: 100%;
+        color:#000;
+
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+
+    </style>
+  </head>
+
+  <body>
+<body>
+
+	<div class="container-fluid" >
+  <div class="row-fluid">
+    <div class="span3 well sidebar-nav" style="background-color:#fff;border:none;" >
+      <!--Sidebar content-->
+      <div class="well" style="padding: 8px 0;background-color:#7eb9f6; border:none" >
+        <ul class="nav nav-list">
+          <li class="active"><a href="#"><i class="icon-white icon-folder-open"></i>Serigne Gallas Mbacké Sindidi</a></li>
+          <li><%=link_to raw("<i class='icon-cog'></i>  Qui est Serigne Gallas?"), home_serigne_gallas_path, :title =>  'Qui est Serigne Gallas?'%></li>
+          <li><%=link_to raw("<i class='icon-cog'></i> Discours de Serigne Gallas"), root_path%></li>
+          <li><%=link_to raw("<i class='icon-cog'></i> Les enseignements de Serigne Gallas"), root_path%></li>
+          <li><%=link_to raw("<i class='icon-cog'></i> Les photos"), root_path%></li>
+
+          <li class="divider"></li>
+
+        </ul>
+      </div> <!-- /well -->
+      <div class="well" style="padding: 8px 0;background-color:#7eb9f6; border:none" >
+        <ul class="nav nav-list">
+
+          <li class="active"><a href="#"><i class="icon-white icon-home"></i>Les enseignements</a></li>
+          <li><a href="#"><i class="icon-book"></i> Les événements</a></li>
+          <li><a href="#"><i class="icon-pencil"></i> Serigne Gallas Mbacké</a></li>
+          <li><a href="#"><i class="icon-pencil"></i> Les dahiras</a></li>
+          <li><a href="#"><i class="icon-cog"></i> Lieux historiques</a></li>
+          <li class="divider"></li>
+
+          <li class="active"><a href="#"><i class="icon-white icon-home"></i>Les événements</a></li>
+          <li><a href="#"><i class="icon-book"></i> Le Magal de Touba</a></li>
+          <li><a href="#"><i class="icon-pencil"></i> Le Magal Kazou Rajab</a></li>
+          <li><a href="#"><i class="icon-pencil"></i> Le Mahouloud-Gamou</a></li>
+          <li><a href="#"><i class="icon-user"></i> Goudy Mame Cheikh</a></li>
+          <li><a href="#"><i class="icon-cog"></i> Les Tiants annuels</a></li>
+          <li class="divider"></li>
+        </div>
+        <div class="well" style="padding: 8px 0;background-color:#7eb9f6; border:none" >
+        <ul class="nav nav-list">
+          <li class="active"><a href="#"><i class="icon-white icon-picture"></i> Galerie image</a></li>
+
+          <li><a href="#"><i class="icon-pencil"></i> Serigne Gallas Mbacké</a></li>
+          <li><a href="#"><i class="icon-pencil"></i> Archives des Dahiras</a></li>
+          <li><a href="#"><i class="icon-user"></i> Grandes figures historiques</a></li>
+          <li><a href="#"><i class="icon-cog"></i> Les lieux historiques</a></li>
+          <li class="divider"></li>
+
+          <li class="active"><a href="#"><i class="icon-white  icon-facetime-video"></i> Vidéos</a></li>
+          <li><a href="#"><i class="icon-book"></i> Discours de Serigne Gallas</a></li>
+          <li><a href="#"><i class="icon-pencil"></i> Archives Magal Touba</a></li>
+          <li><a href="#"><i class="icon-pencil"></i>Archives Magal Kazou Rajab</a></li>
+          <li><a href="#"><i class="icon-user"></i> Archives du Maouloud</a></li>
+          <li><a href="#"><i class="icon-cog"></i> Archives des Dahiraas</a></li>
+          <li class="divider"></li>
+
+        </ul>
+      </div> <!-- /well -->
+
+      <div class="well" style="padding: 8px 0;background-color:#7eb9f6; border:none" >
+        <ul class="nav nav-list">
+          <li class="active"><a href="#"><i class="icon-white icon-folder-open"></i>Les articles</a></li>
+
+          <li><a href="#"><i class="icon-pencil"></i>Vie et oeuvres de Serigne Touba</a></li>
+          <li><a href="#"><i class="icon-pencil"></i>Serigne Fallou Mbacké</a></li>
+          <li><a href="#"><i class="icon-user"></i>Serigne Abdou Karim Mbacké</a></li>
+          <li><a href="#"><i class="icon-cog"></i>Le Grand Magal de Touba</a></li>
+          <li class="divider"></li>
+
+        </ul>
+      </div> <!-- /well -->
+
+      <div class="well" style="padding: 8px 0;background-color:#7eb9f6; border:none" >
+        <ul class="nav nav-list">
+          <li class="active"><a href="#"><i class="icon-white icon-home"></i> Se connecter</a></li>
+          <% #render "devise/sessions/new"%>
+
+          <li class="divider"></li>
+
+        </ul>
+      </div> <!-- /well -->
+
+
+    </div>
+    <div class="span9 well sidebar-nav" style="background-color:#7eb9f6; border:none; margin-top:10px;">
+      <!--Body content-->
+      <div class="navbar navbar-fixed">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <%=link_to raw("<span class='brand'>Diwanou Gallas</span>"), root_path%>
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class=""><%=link_to 'Accueil', root_path%></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mouridisme<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Islam et mouridisme</a></li>
+                <li><a href="#">Les grandes figures</a></li>
+                <li><a href="#">Ville sainte de Touba</a></li>
+                <li><a href="#">Le Magal de Touba</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Ses Khalifs</a></li>
+                <li><a href="#">Les villes fondées</a></li>
+
+              </ul>
+            </li>
+            <li class=""><%=link_to 'Serigne Touba', serigne_touba_index_path%></li>
+            <li class=""><%=link_to 'Serigne Fallou', root_path%></li>
+          </ul>
+          <ul class="nav pull-right">
+
+            <li class="divider-vertical"></li>
+            <li class="dropdown">
+              <div class="btn-group">
+          <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Les Dahiras <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Parcelles</a></li>
+            <li><a href="#">Khombole</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+            </li>
+          </ul>
+        </div><!-- /.nav-collapse -->
+      </div>
+    </div><!-- /navbar-inner -->
+  </div><!-- /navbar -->
+      <%= yield %>
+
+    </div>
+  </div>
+  <!-- Footer
+      ================================================== -->
+      <footer class="footer well"  style="background-color:#7eb9f6; border:none">
+        <p class="pull-right"><a href="#"><button class="btn"><i class="icon-circle-arrow-up"></i> </button></a></p>
+        <p>diwanougallas@gmail.com<br/>
+           telephone: (+221) 777155482
+        </p>
+      </footer>
+</div>
+
+
+
+</body>
+</html>
