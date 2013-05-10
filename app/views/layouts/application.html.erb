@@ -27,7 +27,57 @@
 
 	<div class="container-fluid" >
   <div class="row-fluid">
-    <div class="span3 well sidebar-nav" style="background-color:#fff;border:none;" >
+    <div class="span12" >
+    <div class="navbar navbar-fixed">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <%=link_to raw("<span class='brand'>Diwanou Gallas</span>"), root_path%>
+        <div class="nav-collapse" style="padding-left:27%">
+          <ul class="nav">
+            <li class=""><%=link_to 'Accueil', root_path%></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mouridisme<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Islam et mouridisme</a></li>
+                <li><a href="#">Les grandes figures</a></li>
+                <li><a href="#">Ville sainte de Touba</a></li>
+                <li><a href="#">Le Magal de Touba</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Ses Khalifs</a></li>
+                <li><a href="#">Les villes fondées</a></li>
+
+              </ul>
+            </li>
+            <li class=""><%=link_to 'Serigne Touba', serigne_touba_index_path%></li>
+            <li class=""><%=link_to 'Serigne Fallou', root_path%></li>
+            <li class=""><%=link_to 'Serigne Abdou Karim', root_path%></li>
+          </ul>
+          <ul class="nav pull-right">
+
+            <li class="divider-vertical"></li>
+            <li class="dropdown">
+              <div class="btn-group">
+          <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Les Dahiras <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Parcelles</a></li>
+            <li><a href="#">Khombole</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div><!-- /btn-group -->
+            </li>
+          </ul>
+        </div><!-- /.nav-collapse -->
+      </div>
+    </div><!-- /navbar-inner -->
+  </div><!-- /navbar -->
+    <div class="span3 well sidebar-nav" style="background-color:#fff; border:none; margin-left:0px " >
       <!--Sidebar content-->
       <div class="well" style="padding: 8px 0;background-color:#7eb9f6; border:none" >
         <ul class="nav nav-list">
@@ -105,58 +155,12 @@
 
 
     </div>
-    <div class="span9 well sidebar-nav" style="background-color:#7eb9f6; border:none; margin-top:10px;">
+    <div class="span9 well sidebar-nav" style="background-color:#7eb9f6; border:none; margin-top:10px; padding-left:1%">
       <!--Body content-->
-      <div class="navbar navbar-fixed">
-    <div class="navbar-inner">
-      <div class="container">
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </a>
-        <%=link_to raw("<span class='brand'>Diwanou Gallas</span>"), root_path%>
-        <div class="nav-collapse">
-          <ul class="nav">
-            <li class=""><%=link_to 'Accueil', root_path%></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Mouridisme<b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Islam et mouridisme</a></li>
-                <li><a href="#">Les grandes figures</a></li>
-                <li><a href="#">Ville sainte de Touba</a></li>
-                <li><a href="#">Le Magal de Touba</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Ses Khalifs</a></li>
-                <li><a href="#">Les villes fondées</a></li>
 
-              </ul>
-            </li>
-            <li class=""><%=link_to 'Serigne Touba', serigne_touba_index_path%></li>
-            <li class=""><%=link_to 'Serigne Fallou', root_path%></li>
-          </ul>
-          <ul class="nav pull-right">
-
-            <li class="divider-vertical"></li>
-            <li class="dropdown">
-              <div class="btn-group">
-          <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Les Dahiras <span class="caret"></span></button>
-          <ul class="dropdown-menu">
-            <li><a href="#">Parcelles</a></li>
-            <li><a href="#">Khombole</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </div><!-- /btn-group -->
-            </li>
-          </ul>
-        </div><!-- /.nav-collapse -->
-      </div>
-    </div><!-- /navbar-inner -->
-  </div><!-- /navbar -->
       <%= yield %>
 
+    </div>
     </div>
   </div>
   <!-- Footer
