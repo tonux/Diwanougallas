@@ -7,7 +7,7 @@ gem 'rails', '3.2.11'
 
 gem 'mysql2'
 
-gem 'therubyracer'
+gem 'therubyracer', '0.12.0', platforms: :ruby
 
 gem 'activeadmin'
 
